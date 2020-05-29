@@ -1,0 +1,166 @@
+.slider-box{
+    border: 1px black solid;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+
+
+.slider{
+    position: relative;
+    width: 4800px;
+    height: 450px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: switch 30s ease-out infinite;
+    animation-delay: 2s;
+    transition: all 0.5s;
+}
+.slider li{
+    float: left;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+
+
+.leftRow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:  0;
+    width: 15%;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.rightRow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:  0;
+    width: 15%;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.rightRow:hover,
+.leftRow:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+.leftRow span,
+.rightRow span{
+    color: rgb(202, 202, 202);
+    position: absolute;
+    box-sizing: inline-box;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+    font-weight: 700;
+    top:50%;
+    margin-left: -10px;
+    transition: color 0.5s;
+}
+
+.leftRow span:hover,
+.rightRow span:hover{
+    color: white;
+}
+
+
+@keyframes switch {
+	0%, 15% {
+		margin-left: 0;
+	}
+	20%, 30% {
+		margin-left: -800px;
+    }
+	35%, 45% {
+		margin-left: -1600px;
+    }
+	50%, 60% {
+		margin-left: -2400px;
+    }
+	65%, 75% {
+		margin-left: -3200px;
+    }
+	80%, 100% {
+		margin-left: -4000px;
+    }
+}
+
+
+.dotlist{
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+
+.dotlist li{
+    float: left;
+    margin: 10px;
+}
+
+
+.dot{
+    height: 10px;
+    width: 10px;
+    border: 1px solid #fff;;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.active-dot{
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 314px;    
+    animation: switchdot 30s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes switchdot {
+	0%, 0% {
+		left: 314px;
+	}
+	20%, 20% {
+		left: 346px;
+    }
+	35%, 35% {
+		left: 378px;
+    }
+	50%, 50% {
+		left: 410px;
+    }
+	65%, 65% {
+		left: 442px;
+    }
+	80%, 80% {
+		left: 474px;
+    }
+}

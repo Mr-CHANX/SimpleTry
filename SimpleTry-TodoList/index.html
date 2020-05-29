@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<body>
+    <main>
+            <div class="todolist" >
+                    <div class="bigword"><h1>todos</h1></div>
+                    <div>
+                        <span class="toggle-all" onclick="tog()">&#xe6a4;</span>
+                        <input id="newItem" class="new-todo"  placeholder="What needs to be done?">
+                    </div>
+                    
+                    <div id="box">
+                    </div>
+                    <div class="bottom" id="bottom">
+                            
+                        <p><strong>0</strong> items left</p>
+                        <ul>
+                            <li><a href="#" class="selected">All</a></li>
+                            <li><a href="#/active">Active</a></li>
+                            <li><a href="#/completed">Completed</a></li>
+                            <button class="clear-completed" onclick="clearall()">Clear completed</button>
+                        </ul>
+                    </div>
+
+            </div>
+    </main>
+
+    <footer>
+        <p>Double-click to edit a todo</p>
+        <p>Created by CHANX</p>
+        <p>Part of TodoMVC</p>
+    </footer>
+    <script src="./js/base.js"></script>
+</body>
+</html> 
