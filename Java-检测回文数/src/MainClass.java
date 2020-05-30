@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 public class MainClass {
 	public static void main (String[] args) {
 		MainFrame frame = new MainFrame();
-		//asds
 	}
 }
 class MainFrame extends JFrame implements ActionListener {
